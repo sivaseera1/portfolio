@@ -1,0 +1,79 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+:root {
+  --bg:#0a0f1a; --card:#101828; --text:#e5f4ff; --muted:#8ca5c0; --accent:#00e0ff;
+  --radius:12px; font-family:Inter,system-ui,sans-serif;
+}
+body.light {
+  --bg:#ffffff; --card:#dfe5ee; --text:#0f1724; --muted:#64748b; --accent:#0ea5a4;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+.container{max-width:var(--container);margin:0 auto;padding:28px}
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.brand{display:flex;gap:14px;align-items:center}
+.brand img{width:48px;height:48px;border-radius:10px;object-fit:cover;border:1px solid #e6eef2;padding:3px}
+.brand h1{font-size:18px;letter-spacing:0.2px}
+.navlinks{display:flex;gap:18px;align-items:center}
+.navlinks a{color:var(--muted);padding:8px 12px;border-radius:8px;font-weight:600}
+.navlinks a:hover{color:var(--text);background:var(--card)}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr 360px;gap:36px;align-items:center;padding:48px 0}
+.intro h2{font-size:34px;line-height:1.02;margin-bottom:10px}
+.intro p{color:var(--muted);margin-bottom:18px;font-size:15px}
+.ctas{display:flex;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;background:var(--accent);color:white;font-weight:700}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(14,165,164,0.12)}
+
+/* Card */
+.card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:var(--shadow)}
+
+/* Sections */
+.section{padding:48px 0}
+.section h3{font-size:20px;margin-bottom:16px}
+
+/* Grid lists */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+
+.profile-pic{width:100%;border-radius:12px;overflow:hidden;border:1px solid #eef4f6}
+.profile-pic img{width:100%;display:block}
+
+/* Skills badges */
+.skills{display:flex;flex-wrap:wrap;gap:10px}
+.skill{background:white;padding:10px 12px;border-radius:10px;border:1px solid #eef4f6;font-weight:600;color:var(--muted)}
+
+/* Project card */
+.project{display:flex;flex-direction:column;gap:12px}
+.project .meta{color:var(--muted);font-size:13px}
+
+/* Footer */
+footer{padding:28px 0;color:var(--muted);border-top:1px solid #f1f5f9;margin-top:40px;}
+
+/* download button*/
+
+.download-btn {padding: 12px 25px;background-color: #007bff;color: white;border: none;border-radius: 8px;font-size: 16px;cursor: pointer;transition: background-color 0.3s;text-decoration: none;}
+.download-btn:hover {background-color: #0056b3;}
+
+
+/* Responsive */
+@media (max-width:920px){
+  .hero{grid-template-columns:1fr;gap:20px}
+  .grid-3{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:600px){
+  .navlinks{display:none}
+  .grid-3{grid-template-columns:1fr}
+  .grid-2{grid-template-columns:1fr}
+  .brand h1{font-size:16px}
+  .intro h2{font-size:26px}
+}
+
+/* small helpers */
+.row{display:flex;gap:12px;align-items:center}
+.small{font-size:13px;color:var(--muted)}
+
+
